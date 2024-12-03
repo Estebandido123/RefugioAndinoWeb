@@ -29,7 +29,12 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+STATIC_URL = '/static/'
 
+# Solo necesario en desarrollo
+STATICFILES_DIRS = [
+    BASE_DIR / 'myapp/static',  # Ruta donde están los archivos estáticos
+]
 INSTALLED_APPS = [
     'myapp',
     'django.contrib.admin',
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'RefugioAndino.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'myapp/templates'],  # Asegúrate de que la ruta es correcta
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +72,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 WSGI_APPLICATION = 'RefugioAndino.wsgi.application'

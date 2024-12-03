@@ -1,3 +1,73 @@
-<div>hola como estan
-    
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Andino - Reserva tu Habitación</title>
+    <link rel="stylesheet" href="{% static 'css/diseno.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#descargar">Descargar App</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <h1>Refugio Andino</h1>
+            <p>Un lugar para desconectar y disfrutar</p>
+        </div>
+    </header>
+
+    <section id="inicio" class="intro">
+        <h2>Bienvenido a Refugio Andino</h2>
+        <p>Disfruta de una estancia única en nuestros exclusivos alojamientos. Tenemos 3 tipos de habitaciones para que elijas la que más se ajuste a tus necesidades.</p>
+    </section>
+
+    <section id="nosotros" class="about">
+        <h2>Nosotros</h2>
+        <p>Refugio Andino es un hotel diseñado para ofrecer tranquilidad, lujo y comodidad en un entorno natural. Ubicado en un lugar privilegiado, nuestro objetivo es brindarte una experiencia inolvidable, ya sea que busques una escapada romántica, unas vacaciones familiares o simplemente relajarte en un ambiente único.</p>
+    </section>
+
+    <section id="habitaciones" class="rooms">
+        <h2>Nuestras Habitaciones</h2>
+        <div class="room">
+            <img src="{% static 'img/familiar.1.jpg' %}" alt="Habitación Familiar">
+            <div class="room-info">
+                <h3>Habitación Familiar</h3>
+                <p>Perfecta para grupos o familias. Espaciosa y cómoda para una estancia agradable.</p>
+            </div>
+        </div>
+        
+        <div class="room">
+            <img src="{% static 'img/suite.jpg' %}" alt="Habitación Suite">
+            <div class="room-info">
+                <h3>Habitación Suite</h3>
+                <p>Disfruta de lujo y confort. Ideal para una escapada romántica o descanso exclusivo.</p>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="{% static 'img/precidencial1.jpg' %}" alt="Suite Presidencial">
+            <div class="room-info">
+                <h3>Suite Presidencial</h3>
+                <p>La mejor opción para una experiencia de lujo completa. Espacios amplios, elegancia y comodidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="descargar" class="download">
+        <h2>Descarga Nuestra App</h2>
+        <p>Haz tus reservas más fácil desde cualquier lugar. Descarga nuestra aplicación móvil:</p>
+        <a href="#" class="download-button">Descargar la App</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Refugio Andino | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

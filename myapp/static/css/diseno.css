@@ -33,3 +33,17 @@ section {
     padding: 100px 20px 50px;
 }
 
+/* Ejemplo de personalización */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}

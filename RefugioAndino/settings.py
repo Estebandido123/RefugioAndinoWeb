@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-o=94^5%ij_x75s@#rsj((h3#4@lvv@l@zk386$mwbmgn=+9c$q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['refugio-andino-web.vercel.app', '127.0.0.1', 'localhost']
+
 
 
 # Application definition

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o=94^5%ij_x75s@#rsj((h3#4@lvv@l@zk386$mwbmgn=+9c$q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['refugio-andino-web.vercel.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = []
 
 
 
@@ -34,7 +34,7 @@ STATIC_URL = '/static/'
 
 # Solo necesario en desarrollo
 STATICFILES_DIRS = [
-    BASE_DIR / 'myapp/static',  # Ruta donde están los archivos estáticos
+    BASE_DIR / 'myapp/static',  
 ]
 INSTALLED_APPS = [
     'django_user_agents',
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'RefugioAndino.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'myapp/templates'],  # Asegúrate de que la ruta es correcta
+        'DIRS': [BASE_DIR / 'myapp/templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

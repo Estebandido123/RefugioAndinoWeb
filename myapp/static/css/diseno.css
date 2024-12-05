@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+header {
+    background-image: url('nav.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(15deg, #00c6ff, #0072ff);
@@ -11,99 +17,19 @@ body {
     line-height: 1.6;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    transition: background-color 0.3s ease-in-out;
+}
+.nav-link {
+    color: #0072ff; 
 }
 
-.menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.navbar-dark .nav-link:hover {
+    color: gold !important; 
 }
 
-.menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s;
+section {
+    padding: 100px 20px 50px;
 }
 
-.menu ul li a:hover {
-    color: #00c6ff;
-}
-
-.intro, .about, .rooms, .download {
-    text-align: center;
-    margin: 50px 20px;
-    padding: 20px;
-}
-
-.intro h2, .about h2, .rooms h2, .download h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.intro p, .about p, .download p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.rooms {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.room {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 280px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.room:hover {
-    transform: translateY(-10px);
-}
-
-.room img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.room-info {
-    padding: 20px;
-}
-
-.download-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background: #0072ff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.download-button:hover {
-    background: #00c6ff;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-}

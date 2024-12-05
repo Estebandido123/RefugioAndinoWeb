@@ -2,72 +2,109 @@
 <html lang="es">
 <head>
     {% load static %}
+    {% load user_agents %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Andino - Reserva tu Habitación</title>
+    <title>Refugio Andino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/diseno.css' %}">
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#habitaciones">Habitaciones</a></li>
-                <li><a href="#descargar">Descargar App</a></li>
-            </ul>
+    <header class="bg-primary bg-gradient text-white text-center py-5" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Refugio Andino</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#habitaciones">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#descargar">Descargar App</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <div class="logo">
-            <h1>Refugio Andino</h1>
-            <p>Un lugar para desconectar y disfrutar</p>
+        <div>
+            <h1 class="display-4">Refugio Andino</h1>
+            <p class="lead">Un lugar para desconectar y disfrutar</p>
         </div>
     </header>
+    
 
-    <section id="inicio" class="intro">
-        <h2>Bienvenido a Refugio Andino</h2>
-        <p>Disfruta de una estancia única en nuestros exclusivos alojamientos. Tenemos 3 tipos de habitaciones para que elijas la que más se ajuste a tus necesidades.</p>
-    </section>
-
-    <section id="nosotros" class="about">
-        <h2>Nosotros</h2>
-        <p>Refugio Andino es un hotel diseñado para ofrecer tranquilidad, lujo y comodidad en un entorno natural. Ubicado en un lugar privilegiado, nuestro objetivo es brindarte una experiencia inolvidable, ya sea que busques una escapada romántica, unas vacaciones familiares o simplemente relajarte en un ambiente único.</p>
-    </section>
-
-    <section id="habitaciones" class="rooms">
-        <h2>Nuestras Habitaciones</h2>
-        <div class="room">
-            <img src="{% static 'img/familiar.1.jpg' %}" alt="Habitación Familiar">
-            <div class="room-info">
-                <h3>Habitación Familiar</h3>
-                <p>Perfecta para grupos o familias. Espaciosa y cómoda para una estancia agradable.</p>
-            </div>
-        </div>
-        
-        <div class="room">
-            <img src="{% static 'img/suite.jpg' %}" alt="Habitación Suite">
-            <div class="room-info">
-                <h3>Habitación Suite</h3>
-                <p>Disfruta de lujo y confort. Ideal para una escapada romántica o descanso exclusivo.</p>
-            </div>
-        </div>
-
-        <div class="room">
-            <img src="{% static 'img/precidencial1.jpg' %}" alt="Suite Presidencial">
-            <div class="room-info">
-                <h3>Suite Presidencial</h3>
-                <p>La mejor opción para una experiencia de lujo completa. Espacios amplios, elegancia y comodidad.</p>
-            </div>
+    <section id="inicio" class="py-5 text-center bg-light" >
+        <div class="container">
+            <h2 class="display-5 text-primary">Bienvenido a Refugio Andino</h2>
+            <p class="lead text-primary">Disfruta de una estancia única en nuestros exclusivos alojamientos. Tenemos 3 tipos de habitaciones para que elijas la que más se ajuste a tus necesidades.</p>
         </div>
     </section>
 
-    <section id="descargar" class="download">
-        <h2>Descarga Nuestra App</h2>
-        <p>Haz tus reservas más fácil desde cualquier lugar. Descarga nuestra aplicación móvil:</p>
-        <a href="#" class="download-button">Descargar la App</a>
+    <section id="nosotros" class="py-5 text-center">
+        <div class="container d-flex align-items-center">
+            <div class="col-md-6">
+                <h2 class="display-5">Nosotros</h2>
+                <p>Refugio Andino es un hotel diseñado para ofrecer tranquilidad, lujo y comodidad en un entorno natural. Ubicado en un lugar privilegiado, nuestro objetivo es brindarte una experiencia inolvidable, ya sea que busques una escapada romántica, unas vacaciones familiares o simplemente relajarte en un ambiente único.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/donde.jpg' %}" alt="Imagen Refugio Andino" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="habitaciones" class="py-5 bg-light" >
+        <div class="container">
+            <h2 class="display-5 text-center text-primary">Nuestras Habitaciones</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="{% static 'img/familiar.1.jpg' %}" class="card-img-top" alt="Habitación Familiar">
+                        <div class="card-body">
+                            <h5 class="card-title">Habitación Familiar</h5>
+                            <p class="card-text">Perfecta para grupos o familias. Espaciosa y cómoda para una estancia agradable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="{% static 'img/suite.jpg' %}" class="card-img-top" alt="Habitación Suite">
+                        <div class="card-body">
+                            <h5 class="card-title">Habitación Suite</h5>
+                            <p class="card-text">Disfruta de lujo y confort. Ideal para una escapada romántica o descanso exclusivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="{% static 'img/precidencial1.jpg' %}" class="card-img-top" alt="Suite Presidencial">
+                        <div class="card-body">
+                            <h5 class="card-title">Suite Presidencial</h5>
+                            <p class="card-text">La mejor opción para una experiencia de lujo completa. Espacios amplios, elegancia y comodidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
+    <section id="descargar" class="py-5 text-center">
+        <div class="container">
+            <h2 class="display-5">Descarga Nuestra App</h2>
+            <p>Haz tus reservas más fácil desde cualquier lugar. Descarga nuestra aplicación móvil:</p>
+            {% if request|is_mobile %}
+            <a class="btn btn-primary mt-3" href="https://drive.google.com/file/d/14y_7W6VE8r61oL7rcdaywNY69FAn-WMR/view?usp=drive_link">Descargar App</a>
+            {% endif %}
+            {% if request|is_pc %}
+            <img src="{% static 'img/qr.png' %}" class="card-img-top" style="width: 300px;" alt="Habitación Suite">
+            {% endif %}
+        </div>
+
+    </section>
+
+    <footer class="py-3 bg-dark text-white text-center">
         <p>&copy; 2024 Refugio Andino | Todos los derechos reservados</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

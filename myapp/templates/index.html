@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="{% static 'css/diseno.css' %}">
 </head>
 <body>
-    <header class="bg-primary bg-gradient text-white text-center py-5">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <header class="bg-primary bg-gradient text-white text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">Refugio Andino</a>
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    <i class="bi bi-house-door-fill"></i> Refugio Andino
+                </a>
                 <button 
                     class="navbar-toggler" 
                     type="button" 
@@ -24,27 +26,38 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#habitaciones">Habitaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#descargar">Descargar App</a></li>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold px-3 py-2 rounded-3 hover-shadow" aria-current="page" href="#inicio">
+                                <i class="bi bi-house-door"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold px-3 py-2 rounded-3 hover-shadow" href="#nosotros">
+                                <i class="bi bi-people"></i> Nosotros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold px-3 py-2 rounded-3 hover-shadow" href="#habitaciones">
+                                <i class="bi bi-door-closed"></i> Habitaciones
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold px-3 py-2 rounded-3 hover-shadow" href="#descargar">
+                                <i class="bi bi-download"></i> Descargar App
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div>
-            <h1 class="display-4">Refugio Andino</h1>
-            <p class="lead">Un lugar para desconectar y disfrutar</p>
-        </div>
     </header>
-    
-    
+
 
     <section id="inicio" class="py-5 text-center bg-light" >
         <div class="container">
-            <h2 class="display-5 text-primary">Bienvenido a Refugio Andino</h2>
+            <h2 class="display-5 text-primary fw-bold">Bienvenido a Refugio Andino</h2>
             <p class="lead text-primary">Disfruta de una estancia única en nuestros exclusivos alojamientos. Tenemos 3 tipos de habitaciones para que elijas la que más se ajuste a tus necesidades.</p>
         </div>
     </section>
@@ -52,7 +65,7 @@
     <section id="nosotros" class="py-5 text-center">
         <div class="container d-flex align-items-center">
             <div class="col-md-6">
-                <h2 class="display-5">Nosotros</h2>
+                <h2 class="display-5 fw-bold">Nosotros</h2>
                 <p>Refugio Andino es un hotel diseñado para ofrecer tranquilidad, lujo y comodidad en un entorno natural. Ubicado en un lugar privilegiado, nuestro objetivo es brindarte una experiencia inolvidable, ya sea que busques una escapada romántica, unas vacaciones familiares o simplemente relajarte en un ambiente único.</p>
             </div>
             <div class="col-md-6">
@@ -60,11 +73,26 @@
             </div>
         </div>
     </section>
+
+    <section id="como-llegar" class="py-5 text-center">
+        <div class="container d-flex align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'img/ubi.png' %}" alt="Mapa de ubicación Refugio Andino" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="display-5 fw-bold">Cómo Llegar</h2>
+                <p>Encuentra fácilmente nuestro hotel en un entorno natural único. Estamos ubicados en Ruta J55, Kilómetro 37.1, Romeral, Maule.</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Ruta+J55,+Kil%C3%B3metro+37.1,+3370000+Romeral,+Maule" target="_blank" class="btn btn-warning mt-3">
+                    Obtener Indicaciones
+                </a>
+            </div>
+        </div>
+    </section>
     
 
     <section id="habitaciones" class="py-5 bg-light" >
         <div class="container">
-            <h2 class="display-5 text-center text-primary">Nuestras Habitaciones</h2>
+            <h2 class="display-5 text-center text-primary fw-bold">Nuestras Habitaciones</h2>
             <div class="row g-4 mt-4">
                 <div class="col-md-4">
                     <div class="card shadow-sm rounded">
@@ -99,10 +127,10 @@
 
     <section id="descargar" class="py-5 text-center">
         <div class="container">
-            <h2 class="display-5">Descarga Nuestra App</h2>
+            <h2 class="display-5 fw-bold">Descarga Nuestra App</h2>
             <p>Haz tus reservas más fácil desde cualquier lugar. Descarga nuestra aplicación móvil:</p>
             {% if request|is_mobile %}
-            <a class="btn btn-primary mt-3" href="https://drive.google.com/file/d/14y_7W6VE8r61oL7rcdaywNY69FAn-WMR/view?usp=drive_link">Descargar App</a>
+            <a class="btn btn-warning mt-5 w-50 fw-bold" href="https://drive.google.com/file/d/14y_7W6VE8r61oL7rcdaywNY69FAn-WMR/view?usp=drive_link">Descargar App</a>
             {% endif %}
             {% if request|is_pc %}
             <img src="{% static 'img/qr.png' %}" class="card-img-top" style="width: 300px;" alt="Habitación Suite">
@@ -111,11 +139,64 @@
 
     </section>
 
+    <section id="funcionalidades" class="py-5" style="background: linear-gradient(45deg,  #0072ff,#00c6ff,);">
+        <div class="container">
+            <h2 class="display-4 text-center text-white mb-4 fw-bold">Características y Funcionalidades</h2>
+            <p class="lead text-center mb-4 text-white">Descubre todo lo que nuestra app puede hacer por ti</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+                <div class="col">
+                    <div class="card border-0 shadow-lg h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-4 d-flex justify-content-center">
+                                <img src="{% static 'img/reservar.png' %}" alt="Reserva Habitaciones" class="img-fluid" style="width: 220px;">
+                            </div>                            
+                            <h5 class="card-title text-primary fw-bold">Reserva Habitaciones</h5>
+                            <p class="card-text text-primary">Realiza reservas de forma rápida y sencilla desde cualquier lugar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow-lg h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <img src="{% static 'img/notificacion.png' %}" alt="Notificaciones Personalizadas" class="img-fluid" style="width: 220px;">
+                            </div>
+                            <h5 class="card-title text-primary fw-bold">Notificaciones Personalizadas</h5>
+                            <p class="card-text text-primary">Recibe alertas de confirmación de tu reserva.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Funcionalidad 3 -->
+                <div class="col">
+                    <div class="card border-0 shadow-lg h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <img src="{% static 'img/historial.png' %}" alt="Historial de Reservas" class="img-fluid" style="width: 220px;">
+                            </div>
+                            <h5 class="card-title text-primary fw-bold">Historial de Reservas</h5>
+                            <p class="card-text text-primary">Accede a tus reservas pasadas y futuras en un solo lugar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow-lg h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <img src="{% static 'img/costos.png' %}" alt="Cálculo Automático de Costos" class="img-fluid" style="width: 220px;">
+                            </div>
+                            <h5 class="card-title text-primary fw-bold">Cálculo Automático de Costos</h5>
+                            <p class="card-text text-primary">Obtén el costo total de tu estadía antes de confirmar tu reserva y selecciona tu divisa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer class="py-3 bg-dark text-white text-center">
         <p>&copy; 2024 Refugio Andino | Todos los derechos reservados</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
